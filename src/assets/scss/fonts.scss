@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/assets/fonts/dejavu-sans/DejaVuSansMono.WOFF');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/montserrat/Montserrat-Regular.WOFF');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    src: url('/assets/fonts/montserrat/Montserrat-Bold.WOFF');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/assets/fonts/open-sans/OpenSans-Regular.WOFF');
+}
+
+$font-mono: 'DejaVu Sans Mono', monospace;
+$font-basic: 'Open Sans', sans-serif;
+$font-header: 'Montserrat', sans-serif;

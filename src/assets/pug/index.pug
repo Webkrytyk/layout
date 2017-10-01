@@ -1,0 +1,45 @@
+doctype html
+html.page-html(lang='pl')
+    head
+        meta(charset='UTF-8')
+        meta(name='description' content='[*****]')
+        title WebKrytyk.pl - Kilka słów krytyki o polskich stronach WWW
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(href='/assets/css/main.css' rel='stylesheet')
+    body.page-body
+        header.page-header
+            h1.page-title
+                a.page-title_link(href='/')
+                    span.page-title_dark Web
+                    span.page-title_light Krytyk
+            p.page-slogan &#8222;Kilka słów krytyki o polskich stronach WWW&#8221;
+        nav.page-nav
+            ul.page-menu
+                li.page-menu_item
+                    a.page-menu_link.page-menu_link--active(href='/') Strona główna
+                li.page-menu_item
+                    a.page-menu_link(href='/') Kategorie
+                li.page-menu_item
+                    a.page-menu_link(href='/') Archiwum
+        main.page-main
+            h2.header.visually-hidden Posty
+            - var n = 0;
+            while n < 4
+                article.post
+                    div.post_content
+                        header.post_header
+                            h3.post_header_title nFinity.pl
+                            span.post_header_summary.post_header_summary--shit Gniot
+                        p.post_p Dawno już w sumie nie przyglądałem się stronie żadnej agencji interaktywnej, więc pora to nadrobić! Dzisiaj padło na nFinity, bo ta nazwa ostatnio obiła mi się o uszy.
+                    footer.post_info
+                        img.post_author-avatar(src='http://via.placeholder.com/50x50' alt='')
+                        span.post_author-name Comandeer
+                        time.post_date 31 lipca 2017
+                        ul.post_tags
+                            li.post_tags_tag
+                                a.tag(href='#') Wideokursy
+                            li.post_tags_tag
+                                a.tag(href='#') Krytyka
+                - n++
+
+        script(src='/main.js')

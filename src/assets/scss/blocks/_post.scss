@@ -1,0 +1,115 @@
+.post {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: $post-margin-bottom;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: -$post-margin-bottom; left: $post-line-left;
+        width: 1px;
+        background: $color-light;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(2em + 10px); left: calc(#{$post-line-left} - 5px);
+        width: 10px;
+        height: 10px;
+        border: 1px solid $color-light;
+        background: $color-dark;
+        border-radius: 50%;
+    }
+}
+
+.post_content {
+    background: $color-light-darker;
+    color: $color-dark;
+    padding: 2em 3em;
+}
+
+.post_header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.post_header_title {
+    font: 1.5em $font-header;
+    font-weight: bold;
+}
+
+.post_header_summary {
+    display: inline-block;
+    text-transform: uppercase;
+    font: 0.9em $font-header;
+    font-weight: bold;
+    padding: 0.3em 1.2em;
+    border-radius: 0.25em;
+    color: $color-light;
+    background: $color-dark;
+}
+
+.post_header_summary--shit {
+    background: $color-danger;
+}
+
+.post_header_summary--half {
+    background: $color-warning;
+}
+
+.post_header_summary--almost {
+    background: $color-success;
+}
+
+.post_p {
+    line-height: 2;
+    text-align: justify;
+}
+
+.post_info {
+    padding: 1.5em 0 0 1.5em;
+    white-space: nowrap;
+}
+
+.post_author-avatar {
+    float: left;
+    margin-right: 0.5em;
+    width: 50px;
+    height: 50px;
+}
+
+.post_author-name {
+    display: block;
+    font: 1.1em $font-header;
+    font-weight: bold;
+    line-height: 25px; // half of avatar
+}
+
+.post_date {
+    display: block;
+    font: 0.8em $font-header;
+    color: $color-primary-light;
+    
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.post_tags {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post_tags_tag {
+    margin-bottom: 0.5em;
+}
