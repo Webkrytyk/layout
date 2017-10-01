@@ -23,6 +23,10 @@
         background: $color-dark;
         border-radius: 50%;
     }
+
+    &:last-of-type::before {
+        bottom: 0;
+    }
 }
 
 .post_content {
@@ -42,6 +46,11 @@
 .post_header_title {
     font: 1.5em $font-header;
     font-weight: bold;
+    transition: color 0.2s ease-in-out;
+
+    &:hover, &:focus {
+        color: $color-primary;
+    }
 }
 
 .post_header_summary {
@@ -79,7 +88,7 @@
 
 .post_author-avatar {
     float: left;
-    margin-right: 0.5em;
+    margin-right: 1em;
     width: 50px;
     height: 50px;
 }
@@ -89,6 +98,11 @@
     font: 1.1em $font-header;
     font-weight: bold;
     line-height: 25px; // half of avatar
+    transition: color 0.2s ease-in-out;
+
+    &:hover, &:focus {
+        color: $color-secondary-light;
+    }
 }
 
 .post_date {
