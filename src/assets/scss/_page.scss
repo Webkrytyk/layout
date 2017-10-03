@@ -124,6 +124,7 @@ a {
 }
 
 .page-main {
-    margin: calc(#{$page-title-size} - #{$page-slogan-margin-top} + 1em) 10vw 10vh calc(#{$menu-width} + 2em);
+    // 5vh is left of post decoration
+    margin: calc(#{$page-title-size} - #{$page-slogan-margin-top} + 1em) 10vw 10vh calc(#{$menu-width} + 2em + 5vh);
 }
 

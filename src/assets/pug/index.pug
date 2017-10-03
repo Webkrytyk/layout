@@ -23,6 +23,7 @@ html.page-html(lang='pl')
                     a.page-menu_link(href='/') Archiwum
         main.page-main
             h2.header.visually-hidden Posty
+
             - var n = 0;
             while n < 4
                 article.post
@@ -42,5 +43,15 @@ html.page-html(lang='pl')
                             li.post_tags_tag
                                 a.tag(href='#') Krytyka
                 - n++
+            
+            nav
+                ul.pagination
+                    li
+                        a.link.pagination_link.pagination_link--active(href='#') 1
+                    li
+                        a.link.pagination_link(href='#') 2
+                    li
+                        a.link.pagination_link(href='#') 3
+
 
         script(src='/main.js')
