@@ -9,16 +9,7 @@ a {
     text-decoration: none;
 }
 
-.link {
-    color: $color-primary;
-    text-decoration: none;
-
-    &:hover, &:focus {
-        text-decoration: underline;
-    }
-}
-
-.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.visually-hidden, .sr-only { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
     position: absolute !important;
     height: 1px; width: 1px; 
     overflow: hidden;

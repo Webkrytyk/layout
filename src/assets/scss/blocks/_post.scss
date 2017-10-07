@@ -33,6 +33,9 @@
     background: $color-light-darker;
     color: $color-dark;
     padding: 2em 3em;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .post_header {
@@ -126,4 +129,12 @@
 
 .post_tags_tag {
     margin-bottom: 0.5em;
+}
+
+.post_readmore {
+    margin-top: 1em;
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    align-self: flex-end;
 }
