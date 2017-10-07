@@ -2,11 +2,23 @@
     list-style: none;
     display: flex;
     justify-content: center;
+
+    /* Rounded corners */
+    // & > :first-child {
+    //     border-radius: 0.35em 0 0 0.35em;
+    //     overflow: hidden;
+    // }
+
+    // & > :last-child {
+    //     border-radius: 0 0.35em 0.35em 0;
+    //     overflow: hidden;
+    // }
 }
 
 .pagination_link {
-    padding: 0.75em 1.25em;
+    padding: 1em 1.2em;
     background: $color-light;
+    display: inline-block;
 }
 
 .pagination_link--active {

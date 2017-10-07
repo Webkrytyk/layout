@@ -38,7 +38,7 @@
     flex-direction: column;
 }
 
-.post_header {
+.post_head {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -46,7 +46,7 @@
     margin-bottom: 2em;
 }
 
-.post_header_title {
+.post_head_title {
     font: 1.5em $font-header;
     font-weight: bold;
     transition: color 0.2s ease-in-out;
@@ -56,7 +56,7 @@
     }
 }
 
-.post_header_summary {
+.post_head_summary {
     display: inline-block;
     text-transform: uppercase;
     font: 0.9em $font-header;
@@ -67,21 +67,25 @@
     background: $color-dark;
 }
 
-.post_header_summary--shit {
+.post_head_summary--shit {
     background: $color-danger;
 }
 
-.post_header_summary--half {
+.post_head_summary--half {
     background: $color-warning;
 }
 
-.post_header_summary--almost {
+.post_head_summary--almost {
     background: $color-success;
 }
 
 .post_p {
     line-height: 2;
     text-align: justify;
+}
+
+.post_p:not(:last-of-type) {
+    margin-bottom: 1.5em;
 }
 
 .post_info {
@@ -135,6 +139,62 @@
     margin-top: 1em;
     display: block;
     text-align: right;
-    font-size: 0.9em;
     align-self: flex-end;
+}
+
+.post_section {
+    margin-top: 2em;
+}
+
+.post_header {
+    font: 1.3em 'Montserrat';
+    margin: 2em 30% 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: rgba($color-dark, 0.1) 1px solid;
+}
+
+.post_header:first-child {
+    margin-top: 0;
+}
+
+.post_listing {
+
+}
+
+.post_listing_item {
+    position: relative;
+}
+
+.post_listing_item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 1em;
+    transform: translate(-50%, -50%);
+    border: 1px solid $color-dark;
+}
+
+.post_listing_item:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.post_listing_item--positive::before {
+    border-color: $color-success;
+}
+
+.post_listing_item--neutral::before {
+    border-color: $color-warning;
+}
+
+.post_listing_item--negative::before {
+    border-color: $color-danger;
+}
+        
+.post_code {
+    margin: 1em 0;
+    display: block;
 }

@@ -1,0 +1,56 @@
+doctype html
+html.page-html(lang='pl')
+    head
+        meta(charset='UTF-8')
+        meta(name='description' content='[*****]')
+        title WebKrytyk.pl - Kilka słów krytyki o polskich stronach WWW
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(href='/assets/css/main.css' rel='stylesheet')
+    body.page-body
+        header.page-header
+            h1.page-title
+                a.page-title_link(href='/')
+                    span.page-title_dark Web
+                    span.page-title_light Krytyk
+            p.page-slogan &#8222;Kilka słów krytyki o polskich stronach WWW&#8221;
+        nav.page-nav
+            ul.page-menu
+                li.page-menu_item
+                    a.page-menu_link.page-menu_link--active(href='/') Strona główna
+                li.page-menu_item
+                    a.page-menu_link(href='/') Kategorie
+                li.page-menu_item
+                    a.page-menu_link(href='/') Archiwum
+        main.page-main
+            article.post
+                div.post_content
+                    header.post_head
+                        h3
+                            a.post_head_title(href='#') nFinity.pl
+                        span.post_head_summary.post_head_summary--shit Gniot
+                    p.post_p Dawno już w sumie nie przyglądałem się stronie żadnej agencji interaktywnej, więc pora to nadrobić! Dzisiaj padło na nFinity, bo ta nazwa ostatnio obiła mi się o uszy.
+                    section.post_section
+                        h4.post_header Wygląd i działanie
+                        ul.post_listing
+                            li.post_listing_item.post_listing_item--positive
+                                p.post_p Pierwsza rzecz, jaka mnie bardzo pozytywnie zaskoczyła, to fakt, że strona jest niemal w pełni funkcjonalna bez JS-a. Niemal, bo nie da się otworzyć menu, a dodatkowo część linków jest zrobiona źle i nie działa bez skryptów. Niemniej do najważniejszych części strony da się dostać przy pomocy linków w treści, a nawet i formularz kontaktowy działa.
+
+                            li.post_listing_item.post_listing_item--negative
+                                p.post_p Gorzej jest z nawigacją klawiaturą. Bardzo często elementy nie reagują w ogóle na klawiaturę lub reagują w sposób, <a href="#" class="link">który jest bardzo słabo widoczny</a>. Żeby było śmieszniej, klawiatura przejeżdża przez menu nawet pomimo tego, że jest ono zamknięte.
+                                p.post_p Niemniej są elementy, <b>do których można</b> dostać się wyłącznie przy pomocy klawiatury, jak np. link do numeru telefonu jest nieklikalny, ale uzyskuje focus po przetabowaniu do niego.
+                                pre
+                                    code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+
+                            li.post_listing_item.post_listing_item--neutral
+                                p.post_p Walidacja formularza jest po angielsku, co wygląda dość dziwnie na polskiej stronie.
+                footer.post_info
+                    img.post_author-avatar(src='http://via.placeholder.com/50x50' alt='')
+                    a.post_author-name(href='#') Comandeer
+                    time.post_date 31 lipca 2017
+                    ul.post_tags
+                        li.post_tags_tag
+                            a.tag(href='#') Wideokursy
+                        li.post_tags_tag
+                            a.tag(href='#') Krytyka
+
+        script(src='/main.js')
