@@ -43,6 +43,32 @@ html.page-html(lang='pl')
 
                             li.post_listing_item.post_listing_item--neutral
                                 p.post_p Walidacja formularza jest po angielsku, co wygląda dość dziwnie na polskiej stronie.
+                    section.post_section
+                        h4.post_header Kod
+                        ul.post_listing
+                            li.post_listing_item.post_listing_item--neutral
+                                p.post_p Nie będę się skupiał na całym kodzie – zwłaszcza, że to WordPress – niemniej chciałbym zwrócić uwagę na kilka szczegółów. Jednym z nich jest zastosowanie DNS prefetchingu, co może nieco przyśpieszyć wczytywanie zasobów pobieranych ze wskazanych domen. Osobiście jednak zastanowiłbym się, czy preloading nie okazałby się wydajniejszy.
+
+                            li.post_listing_item.post_listing_item--negative
+                                p.post_p Ten znacznik wymusza renderowanie strony przy pomocy najnowszego silnika IE. Część chrome=1 z kolei pozwalało na użycie Chrome Frame – rozwiązania Google, które odpalało silnik Chrome’a wewnątrz IE. Niemniej to rozwiązanie wycofano ponad 3 lata temu.
+                                pre
+                                    code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+                    
+                    section.comments
+                        h4.comments_header Komentarze
+                        - var n = 0;
+                        while n < 3
+                            article.comment
+                                footer.comment_info
+                                    div.comment_avatar
+                                        img(src='https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&r=pg&d=mm' alt='')
+                                    div
+                                        div.comment_author Comandeer
+                                        time.comment_date 7 października 2017 o 21:42
+                                p.comment_p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?
+
+                            - n++;
+
                 footer.post_info
                     img.post_author-avatar(src='http://via.placeholder.com/50x50' alt='')
                     a.post_author-name(href='#') Comandeer
