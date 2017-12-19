@@ -1,0 +1,1 @@
+!function(){"use strict";!function(){function e(){n.classList.remove("page-nav--open")}var n=document.getElementById("nav");document.getElementById("nav-open").addEventListener("click",function(){n.classList.contains("page-nav--open")?e():n.classList.add("page-nav--open")}),document.getElementById("page-wrapper").addEventListener("click",e)}()}();

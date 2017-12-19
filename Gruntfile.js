@@ -1,19 +1,19 @@
 module.exports = function (grunt) {
   // Rollup specific plugins
-  var uglify = require('rollup-plugin-uglify');
-  var babel = require('rollup-plugin-babel');
-  var resolve = require('rollup-plugin-node-resolve');
-  var commonjs = require('rollup-plugin-commonjs');
-  var eslint = require('rollup-plugin-eslint');
+  const uglify = require('rollup-plugin-uglify');
+  const babel = require('rollup-plugin-babel');
+  const resolve = require('rollup-plugin-node-resolve');
+  const commonjs = require('rollup-plugin-commonjs');
+  const eslint = require('rollup-plugin-eslint');
 
-  var paths = {
+  const paths = {
     source: 'src/',
     buildTarget: 'dist/',
     public: 'public/',
     temp: '.tmp/'
   }
 
-  var config = {
+  const config = {
     browserSync: {
       dev: {
         browser: 'firefox',
@@ -132,7 +132,9 @@ module.exports = function (grunt) {
         }]
       },
       dist: {
-        options: {},
+        options: {
+          pretty: true
+        },
         files: [{
           expand: true,
           cwd: paths.source + 'assets/pug',

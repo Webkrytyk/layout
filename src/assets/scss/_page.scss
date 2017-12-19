@@ -28,6 +28,11 @@ a {
 
 }
 
+.page-html, .page-body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .page-header {
 
 }
@@ -70,9 +75,10 @@ a {
 
 .page-slogan {
     margin-left: calc(#{$page-title-size} + 2em);
-    margin-top: $page-slogan-margin-top;
+    padding-top: $page-slogan-margin-top;
     font-family: $font-mono;
     font-style: italic;
+    line-height: 1.5;
 }
 
 .page-nav {
@@ -119,3 +125,15 @@ a {
     margin: calc(#{$page-title-size} - #{$page-slogan-margin-top} + 1em) 10vw 10vh calc(#{$menu-width} + 2em + 5vh);
 }
 
+.nav-open {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 50;
+    box-shadow: 0 0 2px #000;
+}
+
+// Increase specifity a bit
+.button.nav-open {
+    display: none;
+}

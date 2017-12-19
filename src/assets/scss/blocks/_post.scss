@@ -44,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2em;
+    text-align: right;
 }
 
 .post_head_title {
@@ -65,6 +66,7 @@
     border-radius: 0.25em;
     color: $color-light;
     background: $color-dark;
+    margin-right: 1em;
 }
 
 .post_head_summary--shit {

@@ -7,13 +7,9 @@ html.page-html(lang='pl')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(href='/assets/css/main.css' rel='stylesheet')
     body.page-body
-        header.page-header
-            h1.page-title
-                a.page-title_link(href='/')
-                    span.page-title_dark Web
-                    span.page-title_light Krytyk
-            p.page-slogan &#8222;Kilka słów krytyki o polskich stronach WWW&#8221;
-        nav.page-nav
+        button.nav-open.button.button--smaller#nav-open Menu
+        
+        nav.page-nav#nav
             ul.page-menu
                 li.page-menu_item
                     a.page-menu_link.page-menu_link--active(href='/') Strona główna
@@ -21,62 +17,71 @@ html.page-html(lang='pl')
                     a.page-menu_link(href='/') Kategorie
                 li.page-menu_item
                     a.page-menu_link(href='/') Archiwum
-        main.page-main
-            article.post
-                div.post_content
-                    header.post_head
-                        h3
-                            a.post_head_title(href='#') nFinity.pl
-                        span.post_head_summary.post_head_summary--shit Gniot
-                    p.post_p Dawno już w sumie nie przyglądałem się stronie żadnej agencji interaktywnej, więc pora to nadrobić! Dzisiaj padło na nFinity, bo ta nazwa ostatnio obiła mi się o uszy.
-                    section.post_section
-                        h4.post_header Wygląd i działanie
-                        ul.post_listing
-                            li.post_listing_item.post_listing_item--positive
-                                p.post_p Pierwsza rzecz, jaka mnie bardzo pozytywnie zaskoczyła, to fakt, że strona jest niemal w pełni funkcjonalna bez JS-a. Niemal, bo nie da się otworzyć menu, a dodatkowo część linków jest zrobiona źle i nie działa bez skryptów. Niemniej do najważniejszych części strony da się dostać przy pomocy linków w treści, a nawet i formularz kontaktowy działa.
+        div.page-wrapper#page-wrapper
+            header.page-header
+                h1.page-title
+                    a.page-title_link(href='/')
+                        span.page-title_dark Web
+                        span.page-title_light Krytyk
+                p.page-slogan &#8222;Kilka słów krytyki o polskich stronach WWW&#8221;
+            
+            main.page-main
+                article.post
+                    div.post_content
+                        header.post_head
+                            h3
+                                a.post_head_title(href='#') nFinity.pl
+                            span.post_head_summary.post_head_summary--shit Gniot
+                        p.post_p Dawno już w sumie nie przyglądałem się stronie żadnej agencji interaktywnej, więc pora to nadrobić! Dzisiaj padło na nFinity, bo ta nazwa ostatnio obiła mi się o uszy.
+                        section.post_section
+                            h4.post_header Wygląd i działanie
+                            ul.post_listing
+                                li.post_listing_item.post_listing_item--positive
+                                    p.post_p Pierwsza rzecz, jaka mnie bardzo pozytywnie zaskoczyła, to fakt, że strona jest niemal w pełni funkcjonalna bez JS-a. Niemal, bo nie da się otworzyć menu, a dodatkowo część linków jest zrobiona źle i nie działa bez skryptów. Niemniej do najważniejszych części strony da się dostać przy pomocy linków w treści, a nawet i formularz kontaktowy działa.
 
-                            li.post_listing_item.post_listing_item--negative
-                                p.post_p Gorzej jest z nawigacją klawiaturą. Bardzo często elementy nie reagują w ogóle na klawiaturę lub reagują w sposób, <a href="#" class="link">który jest bardzo słabo widoczny</a>. Żeby było śmieszniej, klawiatura przejeżdża przez menu nawet pomimo tego, że jest ono zamknięte.
-                                p.post_p Niemniej są elementy, <b>do których można</b> dostać się wyłącznie przy pomocy klawiatury, jak np. link do numeru telefonu jest nieklikalny, ale uzyskuje focus po przetabowaniu do niego.
-                                pre
-                                    code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+                                li.post_listing_item.post_listing_item--negative
+                                    p.post_p Gorzej jest z nawigacją klawiaturą. Bardzo często elementy nie reagują w ogóle na klawiaturę lub reagują w sposób, <a href="#" class="link">który jest bardzo słabo widoczny</a>. Żeby było śmieszniej, klawiatura przejeżdża przez menu nawet pomimo tego, że jest ono zamknięte.
+                                    p.post_p Niemniej są elementy, <b>do których można</b> dostać się wyłącznie przy pomocy klawiatury, jak np. link do numeru telefonu jest nieklikalny, ale uzyskuje focus po przetabowaniu do niego.
+                                    pre
+                                        code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
 
-                            li.post_listing_item.post_listing_item--neutral
-                                p.post_p Walidacja formularza jest po angielsku, co wygląda dość dziwnie na polskiej stronie.
-                    section.post_section
-                        h4.post_header Kod
-                        ul.post_listing
-                            li.post_listing_item.post_listing_item--neutral
-                                p.post_p Nie będę się skupiał na całym kodzie – zwłaszcza, że to WordPress – niemniej chciałbym zwrócić uwagę na kilka szczegółów. Jednym z nich jest zastosowanie DNS prefetchingu, co może nieco przyśpieszyć wczytywanie zasobów pobieranych ze wskazanych domen. Osobiście jednak zastanowiłbym się, czy preloading nie okazałby się wydajniejszy.
+                                li.post_listing_item.post_listing_item--neutral
+                                    p.post_p Walidacja formularza jest po angielsku, co wygląda dość dziwnie na polskiej stronie.
+                        section.post_section
+                            h4.post_header Kod
+                            ul.post_listing
+                                li.post_listing_item.post_listing_item--neutral
+                                    p.post_p Nie będę się skupiał na całym kodzie – zwłaszcza, że to WordPress – niemniej chciałbym zwrócić uwagę na kilka szczegółów. Jednym z nich jest zastosowanie DNS prefetchingu, co może nieco przyśpieszyć wczytywanie zasobów pobieranych ze wskazanych domen. Osobiście jednak zastanowiłbym się, czy preloading nie okazałby się wydajniejszy.
 
-                            li.post_listing_item.post_listing_item--negative
-                                p.post_p Ten znacznik wymusza renderowanie strony przy pomocy najnowszego silnika IE. Część chrome=1 z kolei pozwalało na użycie Chrome Frame – rozwiązania Google, które odpalało silnik Chrome’a wewnątrz IE. Niemniej to rozwiązanie wycofano ponad 3 lata temu.
-                                pre
-                                    code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
-                    
-                    section.comments
-                        h4.comments_header Komentarze
-                        - var n = 0;
-                        while n < 3
-                            article.comment
-                                footer.comment_info
-                                    div.comment_avatar
-                                        img(src='https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&r=pg&d=mm' alt='')
-                                    div
-                                        div.comment_author Comandeer
-                                        time.comment_date 7 października 2017 o 21:42
-                                p.comment_p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?
+                                li.post_listing_item.post_listing_item--negative
+                                    p.post_p Ten znacznik wymusza renderowanie strony przy pomocy najnowszego silnika IE. Część chrome=1 z kolei pozwalało na użycie Chrome Frame – rozwiązania Google, które odpalało silnik Chrome’a wewnątrz IE. Niemniej to rozwiązanie wycofano ponad 3 lata temu.
+                                    pre
+                                        code.post_code &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+                        
+                        section.comments
+                            h4.comments_header Komentarze
+                            - var n = 0;
+                            while n < 3
+                                article.comment
+                                    footer.comment_info
+                                        div.comment_avatar
+                                            img(src='https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&r=pg&d=mm' alt='')
+                                        div
+                                            div.comment_author Comandeer
+                                            time.comment_date 7 października 2017 o 21:42
+                                    p.comment_p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?
 
-                            - n++;
+                                - n++;
 
-                footer.post_info
-                    img.post_author-avatar(src='http://via.placeholder.com/50x50' alt='')
-                    a.post_author-name(href='#') Comandeer
-                    time.post_date 31 lipca 2017
-                    ul.post_tags
-                        li.post_tags_tag
-                            a.tag(href='#') Wideokursy
-                        li.post_tags_tag
-                            a.tag(href='#') Krytyka
+                    footer.post_info
+                        img.post_author-avatar(src='http://via.placeholder.com/50x50' alt='')
+                        div
+                            a.post_author-name(href='#') Comandeer
+                            time.post_date 31 lipca 2017
+                        ul.post_tags
+                            li.post_tags_tag
+                                a.tag(href='#') Wideokursy
+                            li.post_tags_tag
+                                a.tag(href='#') Krytyka
 
         script(src='/main.js')

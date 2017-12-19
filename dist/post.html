@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="page-html" lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="[*****]">
+    <title>WebKrytyk.pl - Kilka słów krytyki o polskich stronach WWW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/main.b08bdbb2f3979530b0358aae82a92c81.css" rel="stylesheet">
+  </head>
+  <body class="page-body">
+    <button class="nav-open button button--smaller" id="nav-open">Menu</button>
+    <nav class="page-nav" id="nav">
+      <ul class="page-menu">
+        <li class="page-menu_item"><a class="page-menu_link page-menu_link--active" href="/">Strona główna</a></li>
+        <li class="page-menu_item"><a class="page-menu_link" href="/">Kategorie</a></li>
+        <li class="page-menu_item"><a class="page-menu_link" href="/">Archiwum</a></li>
+      </ul>
+    </nav>
+    <div class="page-wrapper" id="page-wrapper">
+      <header class="page-header">
+        <h1 class="page-title"><a class="page-title_link" href="/"><span class="page-title_dark">Web</span><span class="page-title_light">Krytyk</span></a></h1>
+        <p class="page-slogan">&#8222;Kilka słów krytyki o polskich stronach WWW&#8221;</p>
+      </header>
+      <main class="page-main">
+        <article class="post">
+          <div class="post_content">
+            <header class="post_head">
+              <h3><a class="post_head_title" href="#">nFinity.pl</a></h3><span class="post_head_summary post_head_summary--shit">Gniot</span>
+            </header>
+            <p class="post_p">Dawno już w sumie nie przyglądałem się stronie żadnej agencji interaktywnej, więc pora to nadrobić! Dzisiaj padło na nFinity, bo ta nazwa ostatnio obiła mi się o uszy.</p>
+            <section class="post_section">
+              <h4 class="post_header">Wygląd i działanie</h4>
+              <ul class="post_listing">
+                <li class="post_listing_item post_listing_item--positive">
+                  <p class="post_p">Pierwsza rzecz, jaka mnie bardzo pozytywnie zaskoczyła, to fakt, że strona jest niemal w pełni funkcjonalna bez JS-a. Niemal, bo nie da się otworzyć menu, a dodatkowo część linków jest zrobiona źle i nie działa bez skryptów. Niemniej do najważniejszych części strony da się dostać przy pomocy linków w treści, a nawet i formularz kontaktowy działa.</p>
+                </li>
+                <li class="post_listing_item post_listing_item--negative">
+                  <p class="post_p">Gorzej jest z nawigacją klawiaturą. Bardzo często elementy nie reagują w ogóle na klawiaturę lub reagują w sposób, <a href="#" class="link">który jest bardzo słabo widoczny</a>. Żeby było śmieszniej, klawiatura przejeżdża przez menu nawet pomimo tego, że jest ono zamknięte.</p>
+                  <p class="post_p">Niemniej są elementy, <b>do których można</b> dostać się wyłącznie przy pomocy klawiatury, jak np. link do numeru telefonu jest nieklikalny, ale uzyskuje focus po przetabowaniu do niego.</p>
+                  <pre><code class="post_code">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;</code></pre>
+                </li>
+                <li class="post_listing_item post_listing_item--neutral">
+                  <p class="post_p">Walidacja formularza jest po angielsku, co wygląda dość dziwnie na polskiej stronie.</p>
+                </li>
+              </ul>
+            </section>
+            <section class="post_section">
+              <h4 class="post_header">Kod</h4>
+              <ul class="post_listing">
+                <li class="post_listing_item post_listing_item--neutral">
+                  <p class="post_p">Nie będę się skupiał na całym kodzie – zwłaszcza, że to WordPress – niemniej chciałbym zwrócić uwagę na kilka szczegółów. Jednym z nich jest zastosowanie DNS prefetchingu, co może nieco przyśpieszyć wczytywanie zasobów pobieranych ze wskazanych domen. Osobiście jednak zastanowiłbym się, czy preloading nie okazałby się wydajniejszy.</p>
+                </li>
+                <li class="post_listing_item post_listing_item--negative">
+                  <p class="post_p">Ten znacznik wymusza renderowanie strony przy pomocy najnowszego silnika IE. Część chrome=1 z kolei pozwalało na użycie Chrome Frame – rozwiązania Google, które odpalało silnik Chrome’a wewnątrz IE. Niemniej to rozwiązanie wycofano ponad 3 lata temu.</p>
+                  <pre><code class="post_code">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;</code></pre>
+                </li>
+              </ul>
+            </section>
+            <section class="comments">
+              <h4 class="comments_header">Komentarze</h4>
+              <article class="comment">
+                <footer class="comment_info">
+                  <div class="comment_avatar"><img src="https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&amp;r=pg&amp;d=mm" alt=""></div>
+                  <div>
+                    <div class="comment_author">Comandeer</div>
+                    <time class="comment_date">7 października 2017 o 21:42</time>
+                  </div>
+                </footer>
+                <p class="comment_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?</p>
+              </article>
+              <article class="comment">
+                <footer class="comment_info">
+                  <div class="comment_avatar"><img src="https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&amp;r=pg&amp;d=mm" alt=""></div>
+                  <div>
+                    <div class="comment_author">Comandeer</div>
+                    <time class="comment_date">7 października 2017 o 21:42</time>
+                  </div>
+                </footer>
+                <p class="comment_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?</p>
+              </article>
+              <article class="comment">
+                <footer class="comment_info">
+                  <div class="comment_avatar"><img src="https://secure.gravatar.com/avatar/26e641c06638c9742903594a031f10d4?s=100&amp;r=pg&amp;d=mm" alt=""></div>
+                  <div>
+                    <div class="comment_author">Comandeer</div>
+                    <time class="comment_date">7 października 2017 o 21:42</time>
+                  </div>
+                </footer>
+                <p class="comment_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus nulla sed tempora consequuntur! Vel ea quo, repellat molestiae iure aut deserunt hic dolor explicabo dolorem nesciunt tempora minima quasi?</p>
+              </article>
+            </section>
+          </div>
+          <footer class="post_info"><img class="post_author-avatar" src="http://via.placeholder.com/50x50" alt="">
+            <div><a class="post_author-name" href="#">Comandeer</a>
+              <time class="post_date">31 lipca 2017</time>
+            </div>
+            <ul class="post_tags">
+              <li class="post_tags_tag"><a class="tag" href="#">Wideokursy</a></li>
+              <li class="post_tags_tag"><a class="tag" href="#">Krytyka</a></li>
+            </ul>
+          </footer>
+        </article>
+      </main>
+    </div>
+    <script src="/main.ad893ec862f795171c294b1fd06b963b.js"></script>
+  </body>
+</html>
